@@ -18,7 +18,23 @@
     <div id="app"></div>
 
     <script type="text/babel">
-      ReactDOM.render(<h1>Hello React</h1>, document.querySelector("#app"));
+      class Headline extends React.Component {
+        render() {
+          const title = "ReactJS";
+          const names = ["Kevin", "James", "John"];
+          const namesList = names.map((name) => <li>{name}</li>);
+          const showNames = true;
+
+          return (
+            <div>
+              <h1>Hello {title}</h1>
+              {showNames ? <ul>{namesList}</ul> : "Brak imion"}
+            </div>
+          );
+          //   return React.createElement('h1', null, 'Hello React');
+        }
+      }
+      ReactDOM.render(<Headline />, document.querySelector("#app"));
     </script>
   </body>
 </html>
