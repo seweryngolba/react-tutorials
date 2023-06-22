@@ -18,17 +18,26 @@
     <div id="app"></div>
 
     <script type="text/babel">
+      const Names = function () {
+        const names = ["Kevin", "James", "John"];
+        const namesList = names.map((name) => <li>{name}</li>);
+        const showNames = true;
+        return <div>{showNames ? <ul>{namesList}</ul> : "Brak imion"}</div>;
+      };
       class Headline extends React.Component {
+        state = {
+          title: "ReactJS",
+        };
+
         render() {
-          const title = "ReactJS";
-          const names = ["Kevin", "James", "John"];
-          const namesList = names.map((name) => <li>{name}</li>);
-          const showNames = true;
+          let title = "ReactJS";
+          const changeTitle = () => this.setState({ title: "Vue" });
 
           return (
             <div>
               <h1>Hello {title}</h1>
-              {showNames ? <ul>{namesList}</ul> : "Brak imion"}
+              <Names />
+              <button onClick={changeTitle}>Change title</button>
             </div>
           );
           //   return React.createElement('h1', null, 'Hello React');
