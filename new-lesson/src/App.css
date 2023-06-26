@@ -36,11 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.Btn {
-  background-color: cadetblue;
-  color: lime;
-  border: none;
-  padding: 10px;
-  border: 1px solid black;
-}
