@@ -1,0 +1,13 @@
+.counter-container {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  padding: 10px;
+}
+
+.counter {
+  padding: 0 30px;
+  margin: 0;
+}
